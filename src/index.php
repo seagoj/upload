@@ -100,27 +100,27 @@
                             <td><input type="text" name="company" id="company"></td>
                         </tr>
                         <tr>
-                            <td><label for="sender">Your email:</label>></td>
+                            <td><label for="sender">Your email:</label></td>
                             <td>&nbsp;</td>
                             <td><input type="text" name="sender" id="sender"></td>
                         </tr>
                         <tr>
-                            <td><label for="recipient">Recipient's Email:</lable>></td>
+                            <td><label for="recipient">Recipient's Email:</lable>>/td>
                             <td>&nbsp;</td>
                             <td><input type="text" name="recipient" id="recipient"></td>
                         </tr>
                         <tr>
-                            <td><label for="notes">Notes:</label>></td>
+                            <td><label for="notes">Notes:</label></td>
                             <td>&nbsp;</td>
                             <td><textarea name='notes' id='notes'></textarea></td>
                         </tr>
                         <tr>
-                            <td><label for="file">Filename:</label>></td>
+                            <td><label for="file">Filename:</label></td>
                             <td>&nbsp;</td>
                             <td><input type="file" name="file" id="file"></td>
                         </tr>
                         <tr>
-                            <td><input type="submit" name="submit" value="Submit"></td>
+                            <td><center><input type="submit" name="submit" value="Submit"></center></td>
                         </tr>
                         </table>
 </form></h5>
