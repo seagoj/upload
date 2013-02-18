@@ -97,7 +97,7 @@
                         <label for="company">Company Name:</label><input type="text" name="company" id="company"><br/>
                         <label for="sender">Your email:</label><input type="text" name="sender" id="sender"><br/>
                         <label for="recipient">Recipient's Email:</lable><input type="text" name="recipient" id="recipient"><br/>
-                        <label for="notes">Notes:</label><textarea name='notes' id='notes'><br/>
+                        <label for="notes">Notes:</label><textarea name='notes' id='notes'></textarea><br/>
                         <label for="file">Filename:</label><input type="file" name="file" id="file"><br/>
                         <input type="submit" name="submit" value="Submit">
 </form></h5>
