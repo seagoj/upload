@@ -1,7 +1,7 @@
 <?php
 function upload()
 {
-    $savePath = "../storage";
+    $savePath = "../storage/";
 
     $allowedExts = array("txt", "pdf", "doc", "docx", "qbb", "xls", "xlsx");
     $extension = end(explode(".", $_FILES["file"]["name"]));
@@ -9,20 +9,29 @@ function upload()
         if ($_FILES["file"]["error"] > 0) {
             echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
         } else {
-            echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+            echo "File Name: " . $_FILES["file"]["name"] . "<br>";
             // echo "Type: " . $_FILES["file"]["type"] . "<br>";
-            echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+            echo "File Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 
             if (file_exists($savePath . $_FILES["file"]["name"])) {
                 echo $_FILES["file"]["name"] . " already exists. ";
             } else {
                 move_uploaded_file($_FILES["file"]["tmp_name"], $savePath . $_FILES["file"]["name"]);
                 echo $_FILES["file"]["name"]." has been successfully uploaded";
-                $ftpString = "ftp://ftp.bas-cpa.com";
+                
+                $headers  = 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-                $body = "A file has been uploaded from ".$_POST['company']." by ".$_POST['sender'].". Please retrieve by clicking <a href='".$ftpString."'>here</a>.";
+                // Additional headers
+                $headers .= 'From: File Transfer <filetransfer@bas-cpa.com>' . "\r\n";
+                
 
-                mail($_POST['recipient'], "File Transfer from ".$_POST['company'], $body);
+
+                $ftpString = "ftp://ftp.bas-cpa.com/storage/";
+
+                $body = "A file has been uploaded from ".$_POST['company']." by ".$_POST['sender'].". ".$_POST['notes']."<br/><br/>Please retrieve by clicking <a href='".$ftpString."'>here</a>.";
+
+                mail($_POST['recipient'], "File Transfer from ".$_POST['company'], $body, $headers);
             }
         }
     } else {
@@ -38,7 +47,7 @@ var_dump($_POST);
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>  Tax Planning and Compliance | Burwitz and Sostak</title>
+<title>  File Transfer | Burwitz and Sostak</title>
 <link rel="canonical" href="http://www.bas-cpa.com/?page_id=223" />
 <link rel="stylesheet" href="http://www.bas-cpa.com/BAS-CPA/wp-content/themes/Minimal/style.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="Burwitz and Sostak RSS Feed" href="http://www.bas-cpa.com/?feed=rss2" />
