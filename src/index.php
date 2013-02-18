@@ -105,7 +105,7 @@
                             <td><input type="text" name="sender" id="sender"></td>
                         </tr>
                         <tr>
-                            <td><label for="recipient">Recipient's Email:</lable>>/td>
+                            <td><label for="recipient">Recipient's Email:</lable></td>
                             <td>&nbsp;</td>
                             <td><input type="text" name="recipient" id="recipient"></td>
                         </tr>
