@@ -18,12 +18,18 @@ function upload()
             } else {
                 move_uploaded_file($_FILES["file"]["tmp_name"], $savePath . $_FILES["file"]["name"]);
                 echo $_FILES["file"]["name"]." has been successfully uploaded";
+                $ftpString = "ftp://ftp.bas-cpa.com";
+
+                $body = "A file has been uploaded from ".$_POST['company']." by ".$_POST['sender'].". Please retrieve by clicking <a href='".$ftpString."'>here</a>.";
+
+                mail($_POST['recipient'], "File Transfer from ".$_POST['company'], $body);
             }
         }
     } else {
         echo "$extension is an invalid file type.";
     }
 }
+
 
 var_dump($_POST);
 ?>
