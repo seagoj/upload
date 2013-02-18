@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>  Tax Planning and Compliance | Burwitz and Sostak</title>
+<title>  File Transfer | Burwitz and Sostak</title>
 <link rel="canonical" href="http://www.bas-cpa.com/?page_id=223" />
 <link rel="stylesheet" href="http://www.bas-cpa.com/BAS-CPA/wp-content/themes/Minimal/style.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="Burwitz and Sostak RSS Feed" href="http://www.bas-cpa.com/?feed=rss2" />
