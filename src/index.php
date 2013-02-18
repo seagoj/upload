@@ -93,13 +93,36 @@
                     <h3>Please submit your file via the form below:</h3>
                     <h5>
                         <form action="upload.php" method="post" enctype="multipart/form-data">
-                        
-                        <label for="company">Company Name:</label><input type="text" name="company" id="company"><br/>
-                        <label for="sender">Your email:</label><input type="text" name="sender" id="sender"><br/>
-                        <label for="recipient">Recipient's Email:</lable><input type="text" name="recipient" id="recipient"><br/>
-                        <label for="notes">Notes:</label><textarea name='notes' id='notes'></textarea><br/>
-                        <label for="file">Filename:</label><input type="file" name="file" id="file"><br/>
-                        <input type="submit" name="submit" value="Submit">
+                        <table>
+                        <tr>
+                            <td><label for="company">Company Name:</label></td>
+                            <td>&nbsp;</td>
+                            <td><input type="text" name="company" id="company"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sender">Your email:</label>></td>
+                            <td>&nbsp;</td>
+                            <td><input type="text" name="sender" id="sender"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="recipient">Recipient's Email:</lable>></td>
+                            <td>&nbsp;</td>
+                            <td><input type="text" name="recipient" id="recipient"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="notes">Notes:</label>></td>
+                            <td>&nbsp;</td>
+                            <td><textarea name='notes' id='notes'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="file">Filename:</label>></td>
+                            <td>&nbsp;</td>
+                            <td><input type="file" name="file" id="file"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="submit" value="Submit"></td>
+                        </tr>
+                        </table>
 </form></h5>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="more-223"></span><br />
 <a href="http://www.bas-cpa.com/BAS-CPA/wp-content/uploads/2011/08/construction.png"><img src="http://www.bas-cpa.com/BAS-CPA/wp-content/uploads/2011/08/construction.png" alt="" title="construction" width="550" height="150" class="alignleft size-full wp-image-212" /></a></p>
