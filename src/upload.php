@@ -1,12 +1,8 @@
 <?php
-$allowedExts = array("jpg", "jpeg", "gif", "png", "txt");
+$savePath = "../storage";
+
+$allowedExts = array("txt");
 $extension = end(explode(".", $_FILES["file"]["name"]));
-// if ((($_FILES["file"]["type"] == "image/gif")
-// || ($_FILES["file"]["type"] == "image/jpeg")
-// || ($_FILES["file"]["type"] == "image/png")
-// || ($_FILES["file"]["type"] == "image/pjpeg"))
-// && ($_FILES["file"]["size"] < 20000)
-// && in_array($extension, $allowedExts))
 if (in_array($extension, $allowedExts)) {
     if ($_FILES["file"]["error"] > 0) {
         echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
@@ -16,11 +12,12 @@ if (in_array($extension, $allowedExts)) {
         echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
         echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 
-        if (file_exists("../storage/" . $_FILES["file"]["name"])) {
+        if (file_exists($savePath . $_FILES["file"]["name"])) {
             echo $_FILES["file"]["name"] . " already exists. ";
         } else {
-            move_uploaded_file($_FILES["file"]["tmp_name"], "../storage/" . $_FILES["file"]["name"]);
-            echo "Stored in: " . "storage/" . $_FILES["file"]["name"];
+            move_uploaded_file($_FILES["file"]["tmp_name"], $savePath . $_FILES["file"]["name"]);
+            // echo "Stored in: " . "storage/" . $_FILES["file"]["name"];\
+            echo $_FILES["file"]["name"]." has been successfully uplaoded";
         }
     }
 } else {
